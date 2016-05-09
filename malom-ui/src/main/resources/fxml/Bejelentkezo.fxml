@@ -36,6 +36,7 @@
 				<Label fx:id="uzenet1" layoutX="44.0" layoutY="193.0" lineSpacing="2.0" prefHeight="45.0" prefWidth="149.0" textAlignment="CENTER" wrapText="true" />
 			</children>
 		</Group>
-		<Button layoutX="129.0" layoutY="257.0" mnemonicParsing="false" text="Új Felhasználó" />
+		<Button layoutX="129.0" layoutY="257.0" mnemonicParsing="false" onAction="#ujFelhasznalo" text="Új Felhasználó" />
+      <Label fx:id="uzenetOsszes" layoutX="112.0" layoutY="179.0" lineSpacing="2.0" prefHeight="48.0" prefWidth="123.0" textAlignment="CENTER" wrapText="true" />
 	</children>
 </AnchorPane>

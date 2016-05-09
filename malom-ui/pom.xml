@@ -8,4 +8,11 @@
 	</parent>
 	<groupId>hu.unideb.inf.malom.ui</groupId>
 	<artifactId>malom-ui</artifactId>
+	<dependencies>
+	<dependency>
+	<groupId>hu.unideb.inf.malom.db</groupId>
+	<artifactId>malom-db</artifactId>
+	<version>1.0</version>
+	</dependency>
+	</dependencies>
 </project>
