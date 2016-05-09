@@ -26,6 +26,8 @@ public class BejelentkezoKezelo implements Initializable {
 
 	private String elsoFelhasznalo;
 	private String masodikFelhasznalo;
+	private boolean elsoFelhasznaloBelepve = false;
+	private boolean masodikFelhasznaloBelepve = false;
 
 	@FXML
 	private TextField elsoFelhasznalonev;
@@ -44,7 +46,7 @@ public class BejelentkezoKezelo implements Initializable {
 
 	@FXML
 	private Label uzenet1;
-	
+
 	@FXML
 	private Label uzenetOsszes;
 
@@ -72,6 +74,9 @@ public class BejelentkezoKezelo implements Initializable {
 	@FXML
 	private Button bejelentkezoGomb2;
 
+	@FXML
+	private Button jatekIndit;
+
 	private List<Bejelentkezes> FelhasznaloLista = new ArrayList<>();
 	private TaroltFelhasznalok felhasznalok = new TaroltFelhasznalok();
 
@@ -87,7 +92,8 @@ public class BejelentkezoKezelo implements Initializable {
 					System.out.println("benn");
 					elsoFelhasznaloElemekTorlese();
 					uzenet.setText("Sikeres beléptél az első felhazsnálóval Neve: " + l.getKeresztnev());
-
+					elsoFelhasznaloBelepve = true;
+					jatekIndit();
 					break;
 				} else {
 					System.out.println("Nem sikerült bejelentkezni");
@@ -109,7 +115,8 @@ public class BejelentkezoKezelo implements Initializable {
 					System.out.println("benn");
 					masodikFelhasznaloElemekTorlese();
 					uzenet1.setText("Sikeres beléptél a második felhazsnálóval Neve: " + l.getKeresztnev());
-
+					masodikFelhasznaloBelepve = true;
+					jatekIndit();
 					break;
 				} else {
 					System.out.println("Nem sikerült bejelentkezni");
@@ -122,6 +129,12 @@ public class BejelentkezoKezelo implements Initializable {
 	@FXML
 	private void ujFelhasznalo(ActionEvent event) throws IOException {
 		main.Regisztralas();
+		((Node) (event.getSource())).getScene().getWindow().hide();
+	}
+
+	@FXML
+	private void JatekInditasa(ActionEvent event) throws IOException {
+		main.MalomIndit();
 		((Node) (event.getSource())).getScene().getWindow().hide();
 	}
 
@@ -146,6 +159,13 @@ public class BejelentkezoKezelo implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		FelhasznaloLista = felhasznalok.taroltFelhasznalok();
+		jatekIndit.setVisible(false);
+	}
+
+	public void jatekIndit() {
+		if (elsoFelhasznaloBelepve == true && masodikFelhasznaloBelepve == true) {
+			jatekIndit.setVisible(true);
+		}
 	}
 
 	public void informacio(String info) {

@@ -47,5 +47,16 @@ public class Main extends Application {
 		stage.setTitle("Új Felhasználó Regisztrálása");
 		stage.show();
 	}
+	
+	public void MalomIndit() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		Pane parent = loader.load(getClass().getResource("/fxml/MalomKinezet.fxml").openStream());
+		Stage stage = new Stage();
+		Scene scene = new Scene(parent);
+		stage.setScene(scene);
+		stage.setResizable(false);
+		stage.setTitle("Malom");
+		stage.show();
+	}
 
 }

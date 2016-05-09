@@ -38,5 +38,6 @@
 		</Group>
 		<Button layoutX="129.0" layoutY="257.0" mnemonicParsing="false" onAction="#ujFelhasznalo" text="Új Felhasználó" />
       <Label fx:id="uzenetOsszes" layoutX="112.0" layoutY="179.0" lineSpacing="2.0" prefHeight="48.0" prefWidth="123.0" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="jatekIndit" layoutX="132.0" layoutY="123.0" mnemonicParsing="false" onAction="#JatekInditasa" text="Játék Indítása" />
 	</children>
 </AnchorPane>
