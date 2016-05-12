@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 import hu.unideb.inf.malom.db.entitas.Bejelentkezes;
 import hu.unideb.inf.malom.db.entitas.TaroltFelhasznalok;
 import hu.unideb.inf.malom.db.jelszotitkositas.JelszoTitkositas;
-import hu.unideb.inf.malom.ui.inditas.Main;
+import hu.unideb.inf.malom.ui.feluletek.betoltes.FeluletBetoltese;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,9 +21,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class BejelentkezoKezelo implements Initializable {
-
-	Main main = new Main();
-
+	
+	FeluletBetoltese betoltes = new FeluletBetoltese();
+	
 	private String elsoFelhasznalo;
 	private String masodikFelhasznalo;
 	private boolean elsoFelhasznaloBelepve = false;
@@ -100,6 +100,7 @@ public class BejelentkezoKezelo implements Initializable {
 					uzenet.setText("Nem sikerült bejelentkezni!");
 				}
 			}
+			uzenetOsszes.setVisible(false);
 		}
 	}
 
@@ -128,13 +129,13 @@ public class BejelentkezoKezelo implements Initializable {
 
 	@FXML
 	private void ujFelhasznalo(ActionEvent event) throws IOException {
-		main.Regisztralas();
+		betoltes.Regisztralas();
 		((Node) (event.getSource())).getScene().getWindow().hide();
 	}
 
 	@FXML
 	private void JatekInditasa(ActionEvent event) throws IOException {
-		main.MalomIndit();
+		betoltes.MalomKinezet();
 		((Node) (event.getSource())).getScene().getWindow().hide();
 	}
 

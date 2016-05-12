@@ -11,21 +11,19 @@ import hu.unideb.inf.malom.db.entitas.Bejelentkezes;
 import hu.unideb.inf.malom.db.entitas.EntitasKezelo;
 import hu.unideb.inf.malom.db.entitas.TaroltFelhasznalok;
 import hu.unideb.inf.malom.db.jelszotitkositas.JelszoTitkositas;
-import hu.unideb.inf.malom.ui.bejelentkezo.kezelo.BejelentkezoKezelo;
+import hu.unideb.inf.malom.ui.feluletek.betoltes.FeluletBetoltese;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
 public class UjFelhasznaloKezelo implements Initializable {
-
+	
+	FeluletBetoltese betoltes = new FeluletBetoltese();
+	
 	@FXML
 	private TextField keresztnev;
 
@@ -71,21 +69,8 @@ public class UjFelhasznaloKezelo implements Initializable {
 			es.em.getTransaction().commit();
 			es.em.close();
 			((Node) (event.getSource())).getScene().getWindow().hide();
-			ujFelhasznaloLetrehozva();
+			betoltes.ujFelhasznaloLetrehozva();
 		}
-	}
-
-	public void ujFelhasznaloLetrehozva() throws IOException {
-		FXMLLoader loader = new FXMLLoader();
-		Pane parent = loader.load(getClass().getResource("/fxml/Bejelentkezo.fxml").openStream());
-		BejelentkezoKezelo s = (BejelentkezoKezelo) loader.getController();
-		s.informacio("Új felhazsnáló létrehozva");
-		Stage stage = new Stage();
-		Scene scene = new Scene(parent);
-		stage.setScene(scene);
-		stage.setResizable(false);
-		stage.setTitle("Bejelentkezés");
-		stage.show();
 	}
 
 }
