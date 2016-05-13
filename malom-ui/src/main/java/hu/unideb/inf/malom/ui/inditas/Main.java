@@ -13,9 +13,12 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
 	FeluletBetoltese betoltes = new FeluletBetoltese();
+//	private static Logger logolo = LoggerFactory.getLogger(Main.class);
+
 
 	@Override
 	public void start(Stage Stage) throws IOException{
+//		logolo.info("Javafx indull");
 		betoltes.BelepesFelulet();
 //		betoltes.MalomKinezet();
 //		betoltes.Regisztralas();
@@ -24,4 +27,6 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
+
 }
