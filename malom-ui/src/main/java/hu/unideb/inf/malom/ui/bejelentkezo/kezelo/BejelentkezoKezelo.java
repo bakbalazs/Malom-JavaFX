@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import hu.unideb.inf.malom.db.entitas.Bejelentkezes;
 import hu.unideb.inf.malom.db.entitas.TaroltFelhasznalok;
 import hu.unideb.inf.malom.db.jelszotitkositas.JelszoTitkositas;
@@ -21,11 +24,15 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class BejelentkezoKezelo implements Initializable {
-	
+
 	FeluletBetoltese betoltes = new FeluletBetoltese();
-	
+
+	private static Logger logolo = LoggerFactory.getLogger(BejelentkezoKezelo.class);
+
 	private String elsoFelhasznalo;
 	private String masodikFelhasznalo;
+	private static String elsoKeresztNev;
+	private static String masoidkKeresztNev;
 	private boolean elsoFelhasznaloBelepve = false;
 	private boolean masodikFelhasznaloBelepve = false;
 
@@ -89,14 +96,17 @@ public class BejelentkezoKezelo implements Initializable {
 			for (Bejelentkezes l : FelhasznaloLista) {
 				if (elsoFelhasznalo.equals(l.getFelhasznalonev())
 						&& JelszoTitkositas.titkositas(elsoJelszo.getText()).equals(l.getJelszo())) {
-					System.out.println("benn");
 					elsoFelhasznaloElemekTorlese();
-					uzenet.setText("Sikeres beléptél az első felhazsnálóval Neve: " + l.getKeresztnev());
+					logolo.debug(
+							"Az első felhasználó bejelentkezo elemeinek letiltása hogy a bejelentekzés valós legyen!");
+					elsoKeresztNev = l.getKeresztnev();
+					logolo.info("Az első felhasználó sikeresen belépett , a keresztneve: " + elsoKeresztNev);
+					uzenet.setText("Sikeres beléptél az első felhazsnálóval Neve: " + elsoKeresztNev);
 					elsoFelhasznaloBelepve = true;
 					jatekIndit();
 					break;
 				} else {
-					System.out.println("Nem sikerült bejelentkezni");
+					logolo.debug("Nem sikerült belépni az első felhasználóval!");
 					uzenet.setText("Nem sikerült bejelentkezni!");
 				}
 			}
@@ -113,17 +123,21 @@ public class BejelentkezoKezelo implements Initializable {
 			for (Bejelentkezes l : FelhasznaloLista) {
 				if (masodikFelhasznalo.equals(l.getFelhasznalonev())
 						&& JelszoTitkositas.titkositas(masodikJelszo.getText()).equals(l.getJelszo())) {
-					System.out.println("benn");
 					masodikFelhasznaloElemekTorlese();
-					uzenet1.setText("Sikeres beléptél a második felhazsnálóval Neve: " + l.getKeresztnev());
+					logolo.debug(
+							"A második felhasználó bejelenetkező elemeinek letiltása hogy a bejelentekzés valós legyen!");
+					masoidkKeresztNev = l.getKeresztnev();
+					logolo.info("Az első felhasználó sikeresen belépett , a keresztneve: " + masoidkKeresztNev);
+					uzenet1.setText("Sikeres beléptél a második felhazsnálóval Neve: " + masoidkKeresztNev);
 					masodikFelhasznaloBelepve = true;
 					jatekIndit();
 					break;
 				} else {
-					System.out.println("Nem sikerült bejelentkezni");
+					logolo.debug("Nem sikerült belépni a második felhasználóval!");
 					uzenet1.setText("Nem sikerült bejelentkezni!");
 				}
 			}
+			uzenetOsszes.setVisible(false);
 		}
 	}
 
@@ -161,6 +175,7 @@ public class BejelentkezoKezelo implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		FelhasznaloLista = felhasznalok.taroltFelhasznalok();
 		jatekIndit.setVisible(false);
+
 	}
 
 	public void jatekIndit() {
@@ -173,4 +188,11 @@ public class BejelentkezoKezelo implements Initializable {
 		uzenetOsszes.setText(info);
 	}
 
+	public static String elsoKeresztNev() {
+		return elsoKeresztNev;
+	}
+
+	public static String maosodikKeresztNev() {
+		return masoidkKeresztNev;
+	}
 }

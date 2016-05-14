@@ -32,6 +32,7 @@
 				<configuration>
 					<createDependencyReducedPom>false</createDependencyReducedPom>
 					<finalName>Malom</finalName>
+					<outputDirectory>../</outputDirectory>
 					<shadedArtifactAttached>true</shadedArtifactAttached>
 					<shadedClassifierName>shaded</shadedClassifierName>
 					<transformers>

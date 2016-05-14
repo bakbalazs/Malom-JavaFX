@@ -21,9 +21,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class UjFelhasznaloKezelo implements Initializable {
-	
+
 	FeluletBetoltese betoltes = new FeluletBetoltese();
-	
+
 	@FXML
 	private TextField keresztnev;
 

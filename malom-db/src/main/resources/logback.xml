@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
-<configuration scan="true" debug="true">
+<configuration scan="false" debug="false">
 
 	<appender name="debug" class="ch.qos.logback.core.FileAppender">
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -86,6 +86,15 @@
 		</encoder>
 	</appender>
 
+	<logger name="c3p0" level="ALL" additivity="false">
+		<appender-ref ref="debug" />
+		<appender-ref ref="info" />
+		<appender-ref ref="error" />
+		<appender-ref ref="warn" />
+		<appender-ref ref="fatal" />
+		<appender-ref ref="trace" />
+	</logger>
+
 	<logger name="org.hibernate" level="ALL" additivity="false">
 		<appender-ref ref="debug" />
 		<appender-ref ref="info" />
@@ -96,20 +105,21 @@
 	</logger>
 
 	<logger name="org.jboss.logging" level="OFF" additivity="false">
-		<appender-ref ref="trace" />
 		<appender-ref ref="debug" />
 		<appender-ref ref="info" />
 		<appender-ref ref="error" />
+		<appender-ref ref="warn" />
 		<appender-ref ref="fatal" />
+		<appender-ref ref="trace" />
 	</logger>
 
-	<!-- <logger name="hu.unideb.inf.malom" level="ALL" additivity="false" > -->
-	<!-- <appender-ref ref="FILE" /> -->
-	<!-- <appender-ref ref="FILE2" /> -->
-	<!-- <appender-ref ref="FILE3" /> -->
-	<!-- <appender-ref ref="FILE4" /> -->
-	<!-- <appender-ref ref="FILE5" /> -->
-	<!-- <appender-ref ref="FILE6" /> -->
-	<!-- </logger> -->
+	<logger name="hu.unideb.inf.malom" level="ALL" additivity="false">
+		<appender-ref ref="debug" />
+		<appender-ref ref="info" />
+		<appender-ref ref="error" />
+		<appender-ref ref="warn" />
+		<appender-ref ref="fatal" />
+		<appender-ref ref="trace" />
+	</logger>
 
 </configuration>
