@@ -9,13 +9,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.malom.MalomKezelo">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="500.0" style="-fx-background-color: #16771d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.malom.MalomKezelo">
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Fájl">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#bezarasMenu" text="Bezárás" />
+                  <MenuItem mnemonicParsing="false" onAction="#kijelentkezesMenu" text="Kijelentkezés" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -39,21 +40,33 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="elsoJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="6.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER">
+            <Label fx:id="elsoJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="241.0" layoutY="6.0" text="és ">
+            <Label layoutX="235.0" layoutY="5.0" text="és ">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="masodikJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="6.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER">
+            <Label fx:id="masodikJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+            <Line endX="500.0" layoutX="2.0" layoutY="29.0" startX="1.0" strokeWidth="5.0" />
+            <Group layoutY="12.0">
+               <children>
+                  <Line endX="100.0" layoutX="204.0" layoutY="94.0" rotate="90.0" startX="-0.0" strokeWidth="5.0" />
+                  <Line endX="100.0" layoutX="374.0" layoutY="314.0" startX="-0.0" strokeWidth="5.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="345.0" layoutX="130.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="246.0" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="145.0" />
+                  <Line endX="100.0" layoutX="32.0" layoutY="317.0" startX="-1.0" strokeWidth="5.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="555.0" layoutX="28.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="449.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="41.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="458.0" layoutX="84.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="337.0" />
+                  <Line endX="100.0" layoutX="205.0" layoutY="542.0" rotate="90.0" startX="-0.0" strokeWidth="5.0" />
+               </children>
+            </Group>
          </children>
       </AnchorPane>
    </center>

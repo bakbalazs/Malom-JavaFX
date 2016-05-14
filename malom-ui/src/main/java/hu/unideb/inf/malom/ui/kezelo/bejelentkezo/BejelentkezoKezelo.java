@@ -143,8 +143,8 @@ public class BejelentkezoKezelo implements Initializable {
 
 	@FXML
 	private void ujFelhasznalo(ActionEvent event) throws IOException {
-		betoltes.Regisztralas();
 		((Node) (event.getSource())).getScene().getWindow().hide();
+		betoltes.Regisztralas();
 	}
 
 	@FXML

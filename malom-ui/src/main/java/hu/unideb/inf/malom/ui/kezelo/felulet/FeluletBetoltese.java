@@ -61,4 +61,16 @@ public class FeluletBetoltese {
 		stage.setTitle("Bejelentkezés");
 		stage.show();
 	}
+
+	public void kijelentkezes() throws IOException {
+		logolo.info("Sikeresen kijelentkeztél a malomból!");
+		Pane parent = loader.load(getClass().getResource("/fxml/Bejelentkezo.fxml").openStream());
+		BejelentkezoKezelo bejelentkezo = (BejelentkezoKezelo) loader.getController();
+		bejelentkezo.informacio("Sikeresen Kijelentkeztél az alkalmazásból!");
+		Scene scene = new Scene(parent);
+		stage.setScene(scene);
+		stage.setResizable(false);
+		stage.setTitle("Bejelentkezés");
+		stage.show();
+	}
 }

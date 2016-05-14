@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import hu.unideb.inf.malom.db.entitas.Bejelentkezes;
 import hu.unideb.inf.malom.db.entitas.EntitasKezelo;
 import hu.unideb.inf.malom.db.entitas.TaroltFelhasznalok;
@@ -39,9 +42,12 @@ public class UjFelhasznaloKezelo implements Initializable {
 	private List<Bejelentkezes> FelhasznaloLista = new ArrayList<>();
 	private TaroltFelhasznalok felhasznalok = new TaroltFelhasznalok();
 
+	private static Logger logolo = LoggerFactory.getLogger(UjFelhasznaloKezelo.class);
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		FelhasznaloLista = felhasznalok.taroltFelhasznalok();
+		logolo.debug("Litába rakja a jelenlegi felhasználókat!");
 	}
 
 	@FXML
@@ -50,6 +56,7 @@ public class UjFelhasznaloKezelo implements Initializable {
 		FelhasznaloLista = felhasznalok.taroltFelhasznalok();
 		for (Bejelentkezes l : FelhasznaloLista) {
 			if (felhasznalonev.getText().equals(l.getFelhasznalonev())) {
+				logolo.info("Már van ilyen regisztrált felhasználó!");
 				uzenet.setText("Már van ilyen regisztrált felhasználó.");
 				felhasznalonev.clear();
 				jelszo.clear();
@@ -59,6 +66,7 @@ public class UjFelhasznaloKezelo implements Initializable {
 		}
 		if (felhasznalonev.getText().isEmpty() == true || jelszo.getText().isEmpty() == true) {
 			uzenet.setText("Kérem írjon be felhasználónevet és jelszót!");
+			logolo.info("Nem írt be felhasználónevet vagy jelszót!");
 			return;
 		} else {
 			addnew.setKeresztnev(keresztnev.getText());
@@ -68,6 +76,7 @@ public class UjFelhasznaloKezelo implements Initializable {
 			es.em.persist(addnew);
 			es.em.getTransaction().commit();
 			es.em.close();
+			logolo.info("Létrehozva az új felhasználó és betöltve a táblázatba!");
 			((Node) (event.getSource())).getScene().getWindow().hide();
 			betoltes.ujFelhasznaloLetrehozva();
 		}
