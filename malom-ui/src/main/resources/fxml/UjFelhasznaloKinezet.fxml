@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="280.0" prefWidth="250.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.ujfelhasznalo.kinezet.UjFelhasznaloKezelo">
+<AnchorPane prefHeight="280.0" prefWidth="250.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.ujfelhasznalo.UjFelhasznaloKezelo">
    <children>
       <TextField fx:id="keresztnev" layoutX="49.0" layoutY="62.0" prefHeight="25.0" prefWidth="163.0" promptText="keresztnév" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="49.0" />
       <TextField fx:id="felhasznalonev" layoutX="49.0" layoutY="113.0" prefHeight="25.0" prefWidth="163.0" promptText="felhasználónév" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="49.0" />

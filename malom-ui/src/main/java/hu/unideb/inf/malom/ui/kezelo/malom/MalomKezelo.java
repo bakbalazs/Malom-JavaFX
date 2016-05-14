@@ -1,4 +1,4 @@
-package hu.unideb.inf.malom.ui.malomkinezet.kezelo;
+package hu.unideb.inf.malom.ui.kezelo.malom;
 
 import java.net.URL;
 import java.util.ResourceBundle;

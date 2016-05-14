@@ -1,4 +1,4 @@
-package hu.unideb.inf.malom.ui.bejelentkezo.kezelo;
+package hu.unideb.inf.malom.ui.kezelo.bejelentkezo;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import hu.unideb.inf.malom.db.entitas.Bejelentkezes;
 import hu.unideb.inf.malom.db.entitas.TaroltFelhasznalok;
 import hu.unideb.inf.malom.db.jelszotitkositas.JelszoTitkositas;
-import hu.unideb.inf.malom.ui.feluletek.betoltes.FeluletBetoltese;
+import hu.unideb.inf.malom.ui.kezelo.felulet.FeluletBetoltese;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

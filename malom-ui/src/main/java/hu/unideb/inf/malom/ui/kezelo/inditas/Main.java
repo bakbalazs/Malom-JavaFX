@@ -1,11 +1,11 @@
-package hu.unideb.inf.malom.ui.inditas;
+package hu.unideb.inf.malom.ui.kezelo.inditas;
 
 import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import hu.unideb.inf.malom.ui.feluletek.betoltes.FeluletBetoltese;
+import hu.unideb.inf.malom.ui.kezelo.felulet.FeluletBetoltese;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

@@ -38,7 +38,7 @@
 					<transformers>
 						<transformer
 							implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-							<mainClass>hu.unideb.inf.malom.ui.inditas.Main</mainClass>
+							<mainClass>hu.unideb.inf.malom.ui.kezelo.inditas.Main</mainClass>
 						</transformer>
 					</transformers>
 				</configuration>

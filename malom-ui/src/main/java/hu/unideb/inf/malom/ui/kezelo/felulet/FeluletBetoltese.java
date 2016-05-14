@@ -1,12 +1,12 @@
-package hu.unideb.inf.malom.ui.feluletek.betoltes;
+package hu.unideb.inf.malom.ui.kezelo.felulet;
 
 import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import hu.unideb.inf.malom.ui.bejelentkezo.kezelo.BejelentkezoKezelo;
-import hu.unideb.inf.malom.ui.malomkinezet.kezelo.MalomKezelo;
+import hu.unideb.inf.malom.ui.kezelo.bejelentkezo.BejelentkezoKezelo;
+import hu.unideb.inf.malom.ui.kezelo.malom.MalomKezelo;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;

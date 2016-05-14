@@ -1,4 +1,4 @@
-package hu.unideb.inf.malom.ui.ujfelhasznalo.kinezet;
+package hu.unideb.inf.malom.ui.kezelo.ujfelhasznalo;
 
 import java.io.IOException;
 import java.net.URL;
@@ -11,7 +11,7 @@ import hu.unideb.inf.malom.db.entitas.Bejelentkezes;
 import hu.unideb.inf.malom.db.entitas.EntitasKezelo;
 import hu.unideb.inf.malom.db.entitas.TaroltFelhasznalok;
 import hu.unideb.inf.malom.db.jelszotitkositas.JelszoTitkositas;
-import hu.unideb.inf.malom.ui.feluletek.betoltes.FeluletBetoltese;
+import hu.unideb.inf.malom.ui.kezelo.felulet.FeluletBetoltese;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
