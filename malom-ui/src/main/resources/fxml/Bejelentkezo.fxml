@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="350.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.bejelentkezo.BejelentkezoKezelo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="350.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.bejelentkezo.BejelentkezoKezelo">
 	<children>
-		<Label layoutX="91.0" layoutY="14.0" text="Bejelentkezés a Malomba">
+		<Label layoutX="83.0" layoutY="11.0" text="Bejelentkezés a Malomba">
 			<font>
-				<Font size="15.0" />
+				<Font size="18.0" />
 			</font>
 		</Label>
 		<Group layoutX="-28.0" layoutY="-15.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="184.4921875" AnchorPane.topAnchor="44.0">
@@ -36,8 +36,8 @@
       				<Button fx:id="bejelentkezoGomb2" layoutX="92.0" layoutY="240.0" mnemonicParsing="false" onAction="#masoidkBejelentkezes" text="Bejelentkezés" />
 			</children>
 		</Group>
-		<Button layoutX="130.0" layoutY="272.0" mnemonicParsing="false" onAction="#ujFelhasznalo" text="Új Felhasználó" />
-      <Label fx:id="uzenetOsszes" layoutX="125.0" layoutY="179.0" lineSpacing="4.0" prefHeight="93.0" prefWidth="110.0" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="uzenetOsszes" layoutX="125.0" layoutY="179.0" lineSpacing="4.0" prefHeight="74.0" prefWidth="110.0" textAlignment="CENTER" wrapText="true" />
       <Button fx:id="jatekIndit" layoutX="132.0" layoutY="123.0" mnemonicParsing="false" onAction="#JatekInditasa" text="Játék Indítása" />
+      <Button ellipsisString="" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#visszaGomb" text="&lt;-" />
 	</children>
 </AnchorPane>

@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import hu.unideb.inf.malom.ui.kezelo.bejelentkezo.BejelentkezoKezelo;
+import hu.unideb.inf.malom.ui.kezelo.kezdo.InditasiKepernyoKezelo;
 import hu.unideb.inf.malom.ui.kezelo.malom.MalomKezelo;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -61,10 +62,10 @@ public class FeluletBetoltese {
 	}
 
 	public void ujFelhasznaloLetrehozva() throws IOException {
-		logolo.info("Új felhasználó létrehozva szöveggel indul a bejelentkező felület.");
-		Pane parent = loader.load(getClass().getResource("/fxml/Bejelentkezo.fxml").openStream());
-		BejelentkezoKezelo bejelentkezo = (BejelentkezoKezelo) loader.getController();
-		bejelentkezo.informacio("Új felhazsnáló létrehozva");
+		logolo.info("Új felhasználó létrehozva szöveggel indul az indító képernyő.");
+		Pane parent = loader.load(getClass().getResource("/fxml/InditasiKepernyo.fxml").openStream());
+		InditasiKepernyoKezelo inditas = (InditasiKepernyoKezelo) loader.getController();
+		inditas.informacio("Új felhasználó létrehozva!");
 		Scene scene = new Scene(parent);
 		stage.setScene(scene);
 		stage.setResizable(false);
@@ -76,11 +77,21 @@ public class FeluletBetoltese {
 		logolo.info("Sikeresen kijelentkeztél a malomból!");
 		Pane parent = loader.load(getClass().getResource("/fxml/Bejelentkezo.fxml").openStream());
 		BejelentkezoKezelo bejelentkezo = (BejelentkezoKezelo) loader.getController();
-		bejelentkezo.informacio("Sikeresen Kijelentkeztél az alkalmazásból!");
+		bejelentkezo.informacio("Sikeresen Kijelentkeztél a játékból!");
 		Scene scene = new Scene(parent);
 		stage.setScene(scene);
 		stage.setResizable(false);
 		stage.setTitle("Bejelentkezés");
+		stage.show();
+	}
+	
+	public void Eredmenyek() throws IOException {
+		logolo.info("Eredmény lista indul");
+		Pane parent = loader.load(getClass().getResource("/fxml/EredmenyLista.fxml").openStream());
+		Scene scene = new Scene(parent);
+		stage.setScene(scene);
+		stage.setResizable(false);
+		stage.setTitle("Eredmények");
 		stage.show();
 	}
 }

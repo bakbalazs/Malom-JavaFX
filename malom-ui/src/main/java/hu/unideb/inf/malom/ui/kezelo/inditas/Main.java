@@ -22,7 +22,7 @@ public class Main extends Application {
 	public void start(Stage Stage) throws IOException {
 		logolo.info("Javafx indull");
 		betoltes.inditasiKepernyo();
-	//	betoltes.BelepesFelulet();
+		// betoltes.BelepesFelulet();
 		// betoltes.MalomKinezet();
 		// betoltes.Regisztralas();
 	}

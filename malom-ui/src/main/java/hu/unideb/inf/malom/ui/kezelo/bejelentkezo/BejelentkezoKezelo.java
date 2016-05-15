@@ -142,14 +142,14 @@ public class BejelentkezoKezelo implements Initializable {
 	}
 
 	@FXML
-	private void ujFelhasznalo(ActionEvent event) throws IOException {
+	private void JatekInditasa(ActionEvent event) throws IOException {
+		betoltes.MalomKinezet();
 		((Node) (event.getSource())).getScene().getWindow().hide();
-		betoltes.Regisztralas();
 	}
 
 	@FXML
-	private void JatekInditasa(ActionEvent event) throws IOException {
-		betoltes.MalomKinezet();
+	private void visszaGomb(ActionEvent event) throws IOException {
+		betoltes.inditasiKepernyo();
 		((Node) (event.getSource())).getScene().getWindow().hide();
 	}
 
