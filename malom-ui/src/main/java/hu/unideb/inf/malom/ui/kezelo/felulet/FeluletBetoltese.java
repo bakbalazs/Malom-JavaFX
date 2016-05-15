@@ -16,6 +16,16 @@ public class FeluletBetoltese {
 	private static Logger logolo = LoggerFactory.getLogger(FeluletBetoltese.class);
 	private FXMLLoader loader = new FXMLLoader();
 	private Stage stage = new Stage();
+	
+	public void inditasiKepernyo() throws IOException {
+		logolo.info("Indítási képernyő indul");
+		Pane parent = loader.load(getClass().getResource("/fxml/InditasiKepernyo.fxml").openStream());
+		Scene scene = new Scene(parent);
+		stage.setScene(scene);
+		stage.setResizable(false);
+		stage.setTitle("Malom Indítási Képernyő");
+		stage.show();
+	}
 
 	public void BelepesFelulet() throws IOException {
 		logolo.info("Bejelentkező felület indul");

@@ -21,7 +21,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage Stage) throws IOException {
 		logolo.info("Javafx indull");
-		betoltes.BelepesFelulet();
+		betoltes.inditasiKepernyo();
+	//	betoltes.BelepesFelulet();
 		// betoltes.MalomKinezet();
 		// betoltes.Regisztralas();
 	}
