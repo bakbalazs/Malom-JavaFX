@@ -19,14 +19,10 @@
                   <MenuItem mnemonicParsing="false" onAction="#kijelentkezesMenu" text="Kijelentkezés" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Segítség">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#jatekSzabaly" text="Játékszabály" />
+                  <MenuItem mnemonicParsing="false" onAction="#keszitok" text="Készítő" />
             </items>
           </Menu>
         </menus>
@@ -35,22 +31,22 @@
    <center>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="8.0" layoutY="5.0" text="Jó Szórakozást a játékoz: ">
+            <Label layoutX="8.0" layoutY="5.0" text="Jó Szórakozást a játékoz: " textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="elsoJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER">
+            <Label fx:id="elsoJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="235.0" layoutY="5.0" text="és ">
+            <Label layoutX="235.0" layoutY="5.0" text="és " textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="masodikJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER">
+            <Label fx:id="masodikJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

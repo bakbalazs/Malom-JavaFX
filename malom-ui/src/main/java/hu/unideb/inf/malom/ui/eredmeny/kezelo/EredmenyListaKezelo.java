@@ -54,16 +54,17 @@ public class EredmenyListaKezelo implements Initializable {
 		FelhasznaloLista = felhasznalok.taroltFelhasznalok();
 		adatok = FXCollections.observableArrayList();
 		for (Bejelentkezes l : FelhasznaloLista) {
-			adatok.add(new Felhasznalok(l.getId(), l.getKeresztnev()));
-		}
+			if(l.getGyozelem() > 0 || l.getVereseg() > 0){
+			adatok.add(new Felhasznalok(l.getId(), l.getKeresztnev() , l.getGyozelem(), l.getVereseg()));
+		
+		}}
 		tabla.setItems(adatok);
 		tabla.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
 		id.setCellValueFactory(c -> c.getValue().getIdProperty());
 		keresztnev.setCellValueFactory(c -> c.getValue().getKeresztnevProperty());
-		// gyozelem.setCellValueFactory(c ->
-		// c.getValue().getGyozelemProperty());
-		// vereseg.setCellValueFactory(c -> c.getValue().getVeresegProperty());
+		gyozelem.setCellValueFactory(c -> c.getValue().getGyozelemProperty());
+		vereseg.setCellValueFactory(c -> c.getValue().getVeresegProperty());
 	}
 
 }

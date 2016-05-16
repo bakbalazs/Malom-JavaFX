@@ -17,18 +17,10 @@ public class EntitasKezelo {
 	 * 
 	 */
 	public EntitasKezelo() {
-		emf = Persistence.createEntityManagerFactory("malom-db");
+		emf = Persistence.createEntityManagerFactory("malom-db.MYSQL");
 		em = emf.createEntityManager();
 
 		em.getTransaction().begin();
-	}
-
-	/**
-	 * 
-	 */
-	public void commit() {
-		em.getTransaction().commit();
-		em.close();
 	}
 
 }

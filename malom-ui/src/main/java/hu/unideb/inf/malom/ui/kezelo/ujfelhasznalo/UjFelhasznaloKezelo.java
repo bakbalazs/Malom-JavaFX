@@ -81,5 +81,11 @@ public class UjFelhasznaloKezelo implements Initializable {
 			betoltes.ujFelhasznaloLetrehozva();
 		}
 	}
+	
+	@FXML
+	private void visszaGomb(ActionEvent event) throws IOException {
+		((Node) (event.getSource())).getScene().getWindow().hide();
+		betoltes.inditasiKepernyo();
+	}
 
 }

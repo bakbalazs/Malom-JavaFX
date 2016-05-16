@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  */
 @Entity
-@Table(name = "user")
+@Table(name = "usersss")
 @XmlRootElement
 @NamedQueries({ @NamedQuery(name = "Bejelentkezes.findAll", query = "SELECT u FROM Bejelentkezes u"), })
 public class Bejelentkezes implements Serializable {
@@ -43,6 +43,10 @@ public class Bejelentkezes implements Serializable {
 	private String jelszo;
 	@Column(name = "keresztnev")
 	private String keresztnev;
+	@Column(name = "gyozelem")
+	private Integer gyozelem = 0;
+	@Column(name = "vereseg")
+	private Integer vereseg = 0;
 
 	/**
 	 * Üres konstruktor a szerializálhatóság miatt.
@@ -124,6 +128,22 @@ public class Bejelentkezes implements Serializable {
 	 */
 	public void setKeresztnev(String keresztnev) {
 		this.keresztnev = keresztnev;
+	}
+	
+	public Integer getGyozelem() {
+		return gyozelem;
+	}
+
+	public void setGyozelem(Integer gyozelem) {
+		this.gyozelem = gyozelem;
+	}
+
+	public Integer getVereseg() {
+		return vereseg;
+	}
+
+	public void setVereseg(Integer vereseg) {
+		this.vereseg = vereseg;
 	}
 
 }

@@ -7,14 +7,14 @@ public class Felhasznalok {
 
 	private SimpleIntegerProperty id;
 	private SimpleStringProperty keresztnev;
-//	private SimpleIntegerProperty gyozelem;
-//	private SimpleIntegerProperty vereseg;
+	private SimpleIntegerProperty gyozelem;
+	private SimpleIntegerProperty vereseg;
 
-	public Felhasznalok(Integer id, String keresztnev/*, Integer gyozelem, Integer vereseg*/) {
+	public Felhasznalok(Integer id, String keresztnev, Integer gyozelem, Integer vereseg) {
 		this.id = new SimpleIntegerProperty(id);
 		this.keresztnev = new SimpleStringProperty(keresztnev);
-//		this.gyozelem = new SimpleIntegerProperty(gyozelem);
-//		this.vereseg = new SimpleIntegerProperty(vereseg);
+		this.gyozelem = new SimpleIntegerProperty(gyozelem);
+		this.vereseg = new SimpleIntegerProperty(vereseg);
 	}
 	
 	public Integer getId() {
@@ -41,28 +41,28 @@ public class Felhasznalok {
 		this.keresztnev = new SimpleStringProperty(keresztnev);
 	}
 	
-//	public Integer getGyozelem() {
-//		return gyozelem.get();
-//	}
-//	
-//	public SimpleIntegerProperty getGyozelemProperty() {
-//		return gyozelem;
-//	}
-//	
-//	public void setGyozelem(Integer gyozelem) {
-//		this.gyozelem = new SimpleIntegerProperty(gyozelem);
-//	}
-//	
-//	public Integer getVereseg() {
-//		return vereseg.get();
-//	}
-//	
-//	public SimpleIntegerProperty getVeresegProperty() {
-//		return vereseg;
-//	}
-//	
-//	public void setVereseg(Integer vereseg) {
-//		this.vereseg = new SimpleIntegerProperty(vereseg);
-//	}
+	public Integer getGyozelem() {
+		return gyozelem.get();
+	}
+	
+	public SimpleIntegerProperty getGyozelemProperty() {
+		return gyozelem;
+	}
+	
+	public void setGyozelem(Integer gyozelem) {
+		this.gyozelem = new SimpleIntegerProperty(gyozelem);
+	}
+	
+	public Integer getVereseg() {
+		return vereseg.get();
+	}
+	
+	public SimpleIntegerProperty getVeresegProperty() {
+		return vereseg;
+	}
+	
+	public void setVereseg(Integer vereseg) {
+		this.vereseg = new SimpleIntegerProperty(vereseg);
+	}
 
 }

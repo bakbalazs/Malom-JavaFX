@@ -94,4 +94,14 @@ public class FeluletBetoltese {
 		stage.setTitle("Eredmények");
 		stage.show();
 	}
+	
+	public void JatekSzabaly() throws IOException {
+		logolo.info("Játékszabály meg lett nyitva.");
+		Pane parent = loader.load(getClass().getResource("/fxml/JatekSzabaly.fxml").openStream());
+		Scene scene = new Scene(parent);
+		stage.setScene(scene);
+		stage.setResizable(false);
+		stage.setTitle("Játékszabály");
+		stage.show();
+	}
 }
