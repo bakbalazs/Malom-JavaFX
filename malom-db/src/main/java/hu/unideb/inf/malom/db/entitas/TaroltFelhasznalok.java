@@ -9,7 +9,9 @@ import java.util.List;
 public class TaroltFelhasznalok {
 	
 	/**
-	 * @return
+	 * A tárolt játékosokat adja vissza minden adatukkal egy listában.
+	 * 
+	 * @return A jázékosról tárolt információk.
 	 */
 	public List<Bejelentkezes> taroltFelhasznalok() {
 		EntitasKezelo es = new EntitasKezelo();

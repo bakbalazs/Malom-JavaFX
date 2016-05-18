@@ -18,10 +18,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 
 /**
- * Az adatbázisban a felhasználókat reprezentáló osztály.
- * Ez egy entitás amit az adatbázisba leképezve egy user nevű táblát kapunk a megfelelő oszlopokkal.
+ * Az adatbázisban a felhasználókat reprezentáló osztály. Ez egy entitás amit az
+ * adatbázisba leképezve egy user nevű táblát kapunk a megfelelő oszlopokkal.
  *
- */
+ **/
 @Entity
 @Table(name = "usersss")
 @XmlRootElement
@@ -30,118 +30,157 @@ public class Bejelentkezes implements Serializable {
 
 	/**
 	 * Alapértelmezett szerializációs azonosító.
-	 */
+	 **/
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * A játékos egyedi azonosítója.
+	**/
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
+
+	/**
+	 * A játékos felhasználóneve.
+	 **/
 	@Column(name = "felhasznalonev")
 	private String felhasznalonev;
+
+	/**
+	 * A játékos jelszava.
+	* */
 	@Column(name = "jelszo")
 	private String jelszo;
+
+	/**
+	 * A játákos keresztneve.
+	 **/
 	@Column(name = "keresztnev")
 	private String keresztnev;
+
+	/**
+	 * Mennyi győzelme volt egy játékosnak, alapból 0 értéket kap.
+	 **/
 	@Column(name = "gyozelem")
 	private Integer gyozelem = 0;
+
+	/**
+	 * Mennyi veresége volt egy játékosnak, alapból 0 értéket kap.
+	 **/
 	@Column(name = "vereseg")
 	private Integer vereseg = 0;
 
 	/**
 	 * Üres konstruktor a szerializálhatóság miatt.
-	 */
+	 **/
 	public Bejelentkezes() {
 	}
 
 	/**
-	 * Visszaadja a felhasználó id-ját.
+	 * Visszaadja a játékos id-ját.
 	 * 
-	 * @return a felhasználó id-ja
-	 */
+	 * @return a játékos id-ja
+	 **/
 	public Integer getId() {
 		return id;
 	}
 
 	/**
-	 * Beállítja a felhasználó id-ját
+	 * Beállítja a játékos id-ját.
 	 * 
-	 * @param id
-	 *            A beállítandó Id.
-	 */
+	 * @param id A beállítandó Id.
+	 **/
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
 	/**
-	 * Visszaadja a felhasználó felhasználónevét.
+	 * Visszaadja a játékos felhasználónevét.
 	 * 
-	 * @return A felhasználó felhasználóneve.
-	 */
+	 * @return A játékos felhasználóneve.
+	 **/
 	public String getFelhasznalonev() {
 		return felhasznalonev;
 	}
 
 	/**
-	 * Beállítja a felhasználó felhasználónevét.
+	 * Beállítja a játékos felhasználónevét.
 	 * 
-	 * @param felhasznalonev
-	 *            A beállítandó felhasználónév.
-	 */
+	 * @param felhasznalonev A beállítandó felhasználónév.
+	 **/
 	public void setFelhasznalonev(String felhasznalonev) {
 		this.felhasznalonev = felhasznalonev;
 	}
 
 	/**
-	 * Visszaadja a felhasználó jelszavát.
+	 * Visszaadja a játékos jelszavát.
 	 * 
-	 * @return A felhasználó jelszava.
-	 */
+	 * @return A játékos jelszava.
+	 **/
 	public String getJelszo() {
 		return jelszo;
 	}
 
 	/**
-	 * Beállítja a felhasználó jelszavát.
+	 * Beállítja a játékos jelszavát.
 	 * 
-	 * @param jelszo
-	 *            A beállítandó jelszó.
-	 */
+	 * @param jelszo A beállítandó jelszó.
+	 **/
 	public void setJelszo(String jelszo) {
 		this.jelszo = jelszo;
 	}
 
 	/**
-	 * Visszaadja a felhasználó keresztnevét.
+	 * Visszaadja a játékos keresztnevét.
 	 * 
-	 * @return A felhasználó keresztneve.
-	 */
+	 * @return A játékos keresztneve.
+	 **/
 	public String getKeresztnev() {
 		return keresztnev;
 	}
 
 	/**
-	 * Beállítja a felhasználó keresztnevét.
+	 * Beállítja a játékos keresztnevét.
 	 * 
-	 * @param keresztnev
-	 *            A beállítandó keresztnév.
-	 */
+	 * @param keresztnev A beállítandó keresztnév.
+	 **/
 	public void setKeresztnev(String keresztnev) {
 		this.keresztnev = keresztnev;
 	}
-	
+
+	/**
+	 * Visszaadja hogy a játékos hányszor nyert játékot.
+	 * 
+	 * @return A játékos győzelmeinek a száma.
+	 **/
 	public Integer getGyozelem() {
 		return gyozelem;
 	}
 
+	/**
+	 * Beállítja a játékos gyözelmeinek a számát.
+	 * 
+	 * @param gyozelem A beállítandó szám.
+	 **/
 	public void setGyozelem(Integer gyozelem) {
 		this.gyozelem = gyozelem;
 	}
 
+	/**
+	 * Visszaadja hogy a játékos hányszor vesztett játékot.
+	 * 
+	 * @return A játékos vereségeinek a száma.
+	**/
 	public Integer getVereseg() {
 		return vereseg;
 	}
 
+	/**
+	 * Beállítja a játékos vereségének a számát.
+	 * 
+	 * @param vereseg A beállítandó szám.
+	 **/
 	public void setVereseg(Integer vereseg) {
 		this.vereseg = vereseg;
 	}
