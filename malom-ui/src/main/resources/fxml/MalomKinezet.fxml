@@ -59,8 +59,152 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="345.0" layoutX="130.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="246.0" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="145.0" />
                   <Line endX="100.0" layoutX="32.0" layoutY="317.0" startX="-1.0" strokeWidth="5.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="555.0" layoutX="28.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="449.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="41.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="458.0" layoutX="84.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="337.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="458.0" layoutX="87.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="337.0" />
                   <Line endX="100.0" layoutX="205.0" layoutY="542.0" rotate="90.0" startX="-0.0" strokeWidth="5.0" />
+                  <ImageView fx:id="img3" fitHeight="34.0" fitWidth="34.0" layoutX="21.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img2" fitHeight="34.0" fitWidth="34.0" layoutX="22.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img1" fitHeight="34.0" fitWidth="34.0" layoutX="22.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img4" fitHeight="34.0" fitWidth="34.0" layoutX="243.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img5" fitHeight="34.0" fitWidth="34.0" layoutX="463.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img6" fitHeight="34.0" fitWidth="34.0" layoutX="463.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img7" fitHeight="34.0" fitWidth="34.0" layoutX="463.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img8" fitHeight="34.0" fitWidth="34.0" layoutX="239.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img11" fitHeight="34.0" fitWidth="34.0" layoutX="73.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img10" fitHeight="34.0" fitWidth="34.0" layoutX="73.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img9" fitHeight="34.0" fitWidth="34.0" layoutX="73.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img12" fitHeight="34.0" fitWidth="34.0" layoutX="244.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img13" fitHeight="34.0" fitWidth="34.0" layoutX="410.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img14" fitHeight="34.0" fitWidth="34.0" layoutX="410.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img15" fitHeight="34.0" fitWidth="34.0" layoutX="410.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img16" fitHeight="34.0" fitWidth="34.0" layoutX="241.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img19" fitHeight="34.0" fitWidth="34.0" layoutX="121.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img20" fitHeight="34.0" fitWidth="34.0" layoutX="241.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img21" fitHeight="34.0" fitWidth="34.0" layoutX="358.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img18" fitHeight="34.0" fitWidth="34.0" layoutX="121.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img17" fitHeight="34.0" fitWidth="34.0" layoutX="121.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img24" fitHeight="34.0" fitWidth="34.0" layoutX="243.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img23" fitHeight="34.0" fitWidth="34.0" layoutX="358.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img22" fitHeight="34.0" fitWidth="34.0" layoutX="362.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/UresGomb.png" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="target3" layoutX="17.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target2" layoutX="17.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target1" layoutX="17.0" layoutY="577.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target4" layoutX="239.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target5" layoutX="458.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target6" layoutX="459.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target7" layoutX="459.0" layoutY="577.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target8" layoutX="234.0" layoutY="579.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target9" layoutX="68.0" layoutY="526.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target10" layoutX="69.0" layoutY="299.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target11" layoutX="69.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target12" layoutX="239.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target13" layoutX="405.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target14" layoutX="406.0" layoutY="294.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target15" layoutX="405.0" layoutY="525.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target16" layoutX="237.0" layoutY="525.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target17" layoutX="116.0" layoutY="473.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target18" layoutX="116.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target19" layoutX="116.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target20" layoutX="236.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target21" layoutX="353.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target22" layoutX="358.0" layoutY="298.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target23" layoutX="353.0" layoutY="473.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target24" layoutX="239.0" layoutY="473.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                </children>
             </Group>
          </children>

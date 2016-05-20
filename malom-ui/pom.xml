@@ -15,6 +15,11 @@
 			<artifactId>malom-db</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>hu.unideb.inf.malom.szolg</groupId>
+			<artifactId>malom-szolg</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
