@@ -17,7 +17,7 @@ public class FeluletBetoltese {
 	private static Logger logolo = LoggerFactory.getLogger(FeluletBetoltese.class);
 	private FXMLLoader loader = new FXMLLoader();
 	private Stage stage = new Stage();
-	
+
 	public void inditasiKepernyo() throws IOException {
 		logolo.info("Indítási képernyő indul");
 		Pane parent = loader.load(getClass().getResource("/fxml/InditasiKepernyo.fxml").openStream());
@@ -84,7 +84,7 @@ public class FeluletBetoltese {
 		stage.setTitle("Bejelentkezés");
 		stage.show();
 	}
-	
+
 	public void Eredmenyek() throws IOException {
 		logolo.info("Eredmény lista indul");
 		Pane parent = loader.load(getClass().getResource("/fxml/EredmenyLista.fxml").openStream());
@@ -94,14 +94,14 @@ public class FeluletBetoltese {
 		stage.setTitle("Eredmények");
 		stage.show();
 	}
-	
+
 	public void JatekSzabaly() throws IOException {
 		logolo.info("Játékszabály meg lett nyitva.");
-		Pane parent = loader.load(getClass().getResource("/fxml/JatekSzabaly.fxml").openStream());
-		Scene scene = new Scene(parent);
-		stage.setScene(scene);
-		stage.setResizable(false);
-		stage.setTitle("Játékszabály");
-		stage.show();
+//		Pane p = loader.load(getClass().getResource("/fxml/JatekSzabaly.fxml").openStream());
+//		Scene s = new Scene(p);
+//		stage.setScene(s);
+//		stage.setResizable(false);
+//		stage.setTitle("Játékszabály");
+//		stage.show();
 	}
 }

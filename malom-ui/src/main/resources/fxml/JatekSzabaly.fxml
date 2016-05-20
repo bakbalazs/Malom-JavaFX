@@ -1,13 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="14.0" layoutY="132.0" prefHeight="180.0" prefWidth="369.0" text="Label" />
-   </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="381.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.jatekszabaly.JatekSzabalyKezelo">
+	<children>
+		<TabPane prefHeight="451.0" prefWidth="381.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="A játék célja">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="8.0" lineSpacing="5.0" prefHeight="105.0" prefWidth="370.0" text="Ha valamelyik játékosnak (akár a lerakások, akár a tologatások során) sikerül három bábuját egy vonalra állítania, azaz malmot alkotnia, akkor levehet egyet ellenfele bábuiból." textOverrun="CENTER_ELLIPSIS" wrapText="true" AnchorPane.bottomAnchor="317.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="96.0" text="A játékot kétféleképpen lehet megnyerni:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="115.0" text="- az ellenfeled bábuinak számát csökkentsd kettőre">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="59.0" layoutY="132.0" text="- szorítsd be az ellenfelet, úgy hogy ne tudjon lépni ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="160.0" layoutY="303.0" text="Jó Játékot">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="A játék kezdete">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="5.0" lineSpacing="5.0" prefHeight="234.0" prefWidth="372.0" text="A játékosok először felváltva, egyenként rakják le a táblára bábuikat, próbálván hármas malmot kialakítani. Ha valamelyik játékosnak (akár a lerakások, akár a tologatások során) sikerül három bábuját egy vonalra állítania, azaz malmot alkotnia, akkor levehet egyet ellenfele bábuiból, kivéve az éppen malmot alkotó, ütés elleni védelmet élvezőket Amennyiben az összes bábu malomban áll, úgy egyikük sem élvez védelmet!" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="A játék menete">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="131.0" prefWidth="371.0" text="Ha az összes korongot felrakták a táblára, illetve már nem tudnak többet rakni, akkor következik a második fázis, a lépegetés. A korongok vízszintes és függőleges irányban mozdíthatók, átlósan nem. Olyan mezőre nem léphetünk, ahol már áll egy korong, és mindig csak a közvetlenül szomszédos csúcspontig léphetünk a vonal mentén." wrapText="true" AnchorPane.bottomAnchor="284.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="7.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="129.0" lineSpacing="5.0" prefHeight="82.0" prefWidth="375.0" text="Ha egy malom három korongjából egyet elmozdítunk, majd visszateszünk, az érvényes malom, tehát újabb korongot vehetünk le. Ez többször is ismételhető." wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="211.0" lineSpacing="5.0" prefHeight="97.0" prefWidth="356.0" text="Érdekes helyzet, ha valaki egy korongját úgy tudja mozgatni, hogy minden lépésével malmot alakít ki. Ezt sokan szabálytalannak mondják, pedig nem az, csukogatásnak vagy csikicsukinak nevezik." wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="308.0" lineSpacing="5.0" prefHeight="39.0" prefWidth="362.0" text="Ha egy játékos nem tud lépni (be van szorulva), akkor elvesztette a játszmát." wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="347.0" prefHeight="68.0" prefWidth="323.0" text="Különleges esetű szabály: Ha a lerakási fázisban egy olyan pontba kerül a korong, ahol egyszerre két malom alakul ki, akkor 2 korongot lehet levenni." wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<Button fx:id="okeGomb" layoutX="172.0" layoutY="458.0" mnemonicParsing="false" onAction="#oke" text="Oké" />
+	</children>
 </Pane>

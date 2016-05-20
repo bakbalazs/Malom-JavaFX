@@ -22,7 +22,6 @@
           <Menu mnemonicParsing="false" text="Segítség">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#jatekSzabaly" text="Játékszabály" />
-                  <MenuItem mnemonicParsing="false" onAction="#keszitok" text="Készítő" />
             </items>
           </Menu>
         </menus>
@@ -76,7 +75,7 @@
                         <Image url="/img/UresGomb.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="img4" fitHeight="34.0" fitWidth="34.0" layoutX="243.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img4" fitHeight="34.0" fitWidth="34.0" layoutX="241.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/img/UresGomb.png" />
                      </image>
@@ -116,7 +115,7 @@
                         <Image url="/img/UresGomb.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="img12" fitHeight="34.0" fitWidth="34.0" layoutX="244.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img12" fitHeight="34.0" fitWidth="34.0" layoutX="241.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/img/UresGomb.png" />
                      </image>
@@ -184,7 +183,7 @@
                   <VBox fx:id="target3" layoutX="17.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target2" layoutX="17.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target1" layoutX="17.0" layoutY="577.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
-                  <VBox fx:id="target4" layoutX="239.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target4" layoutX="237.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target5" layoutX="458.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target6" layoutX="459.0" layoutY="297.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target7" layoutX="459.0" layoutY="577.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
@@ -192,7 +191,7 @@
                   <VBox fx:id="target9" layoutX="68.0" layoutY="526.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target10" layoutX="69.0" layoutY="299.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target11" layoutX="69.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
-                  <VBox fx:id="target12" layoutX="239.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
+                  <VBox fx:id="target12" layoutX="236.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target13" layoutX="405.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target14" layoutX="406.0" layoutY="294.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />
                   <VBox fx:id="target15" layoutX="405.0" layoutY="525.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" />

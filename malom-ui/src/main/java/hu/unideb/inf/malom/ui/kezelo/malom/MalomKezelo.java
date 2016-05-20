@@ -13,11 +13,14 @@ import hu.unideb.inf.malom.vezerles.KepBetoltese;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -202,12 +205,14 @@ public class MalomKezelo implements Initializable {
 
 	@FXML
 	public void jatekSzabaly(ActionEvent event) throws IOException {
-		betoltes.JatekSzabaly();
-	}
-
-	@FXML
-	public void keszitok(ActionEvent event) {
-
+		FXMLLoader loader = new FXMLLoader();
+		Stage stage = new Stage();
+		Pane p = loader.load(getClass().getResource("/fxml/JatekSzabaly.fxml").openStream());
+		Scene s = new Scene(p);
+		stage.setScene(s);
+		stage.setResizable(false);
+		stage.setTitle("Játékszabály");
+		stage.show();
 	}
 
 	public void elsoJatekosNev(String keresztnev) {
