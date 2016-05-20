@@ -14,11 +14,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MalomKezelo implements Initializable {
 
 	 private static Logger logolo = LoggerFactory.getLogger(MalomKezelo.class);
+	 
+	 private ImageView iv;
+	 
+	int curseur = 0 ;
+
 
 	FeluletBetoltese betoltes = new FeluletBetoltese();
 
@@ -30,6 +38,12 @@ public class MalomKezelo implements Initializable {
 
 	@FXML
 	private Label masodikJatekos;
+	
+	@FXML
+	private VBox FeherBabuHely;
+	
+	@FXML
+	private VBox FeketeBabuHely;
 
 	@FXML
 	public void kijelentkezesMenu(ActionEvent event) throws IOException {
@@ -65,5 +79,37 @@ public class MalomKezelo implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+        
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+        insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
 	}
+	
+	public void insertImage(Image i, VBox hb1){
+        
+       iv = new ImageView();
+       iv.setImage(i);
+        
+//       setupGestureSource(iv);
+
+       hb1.getChildren().add(iv);
+   }
+
+
 }

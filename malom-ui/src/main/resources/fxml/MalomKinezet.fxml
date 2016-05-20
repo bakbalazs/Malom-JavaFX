@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="500.0" style="-fx-background-color: #16771d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.malom.MalomKezelo">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="579.0" style="-fx-background-color: #16771d;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.malom.ui.kezelo.malom.MalomKezelo">
    <top>
       <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
         <menus>
@@ -31,27 +31,27 @@
    <center>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="8.0" layoutY="5.0" text="Jó Szórakozást a játékoz: " textFill="WHITE">
+            <Label layoutX="62.0" layoutY="4.0" text="Jó Szórakozást a játékoz: " textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="elsoJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="elsoJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="4.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="235.0" layoutY="5.0" text="és " textFill="WHITE">
+            <Label layoutX="317.0" layoutY="4.0" text="és " textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="masodikJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="masodikJatekos" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="5.0" prefHeight="17.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Line endX="500.0" layoutX="2.0" layoutY="29.0" startX="1.0" strokeWidth="5.0" />
+            <Line endX="500.0" layoutX="2.0" layoutY="29.0" strokeWidth="5.0" />
             <Group layoutY="12.0">
                <children>
                   <Line endX="100.0" layoutX="204.0" layoutY="94.0" rotate="90.0" startX="-0.0" strokeWidth="5.0" />
@@ -61,201 +61,15 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="555.0" layoutX="28.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="449.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="41.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="458.0" layoutX="84.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="337.0" />
                   <Line endX="100.0" layoutX="205.0" layoutY="542.0" rotate="90.0" startX="-0.0" strokeWidth="5.0" />
-                  <GridPane layoutX="12.0" layoutY="27.0" prefHeight="43.0" prefWidth="47.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="67.0" layoutY="67.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="232.0" layoutY="27.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="229.0" layoutY="67.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="388.0" layoutY="73.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="22.0" layoutY="290.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="67.0" layoutY="295.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="114.0" layoutY="293.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="456.0" layoutY="23.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="353.0" layoutY="290.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="232.0" layoutY="124.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="114.0" layoutY="124.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="348.0" layoutY="125.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="398.0" layoutY="290.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="445.0" layoutY="290.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="12.0" layoutY="561.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="233.0" layoutY="569.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="232.0" layoutY="525.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="61.0" layoutY="521.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="114.0" layoutY="462.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="233.0" layoutY="468.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="348.0" layoutY="462.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="398.0" layoutY="521.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <GridPane layoutX="445.0" layoutY="561.0" prefHeight="43.0" prefWidth="47.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
                </children>
             </Group>
          </children>
       </AnchorPane>
    </center>
+   <left>
+      <VBox fx:id="FeherBabuHely" prefHeight="410.0" prefWidth="37.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox fx:id="FeketeBabuHely" prefHeight="410.0" prefWidth="37.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>
