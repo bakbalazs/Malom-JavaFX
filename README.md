@@ -3,10 +3,10 @@
 #### A klasszikus Malom játék JavaFX-ben megírva. 
 
 ### Funkciók
-*Új felhasználó regisztrálása
-*Bejelentkezés regisztrált felhasználóval
-*Eredménylista megtekintése, amely a játékosok gyõzelmeit és vereségeit tartalmazza.
-*Malom játék két felhasználóval. A felhasználók egymás ellen játszanak.
+* Új felhasználó regisztrálása
+* Bejelentkezés regisztrált felhasználóval
+* Eredménylista megtekintése, amely a játékosok gyõzelmeit és vereségeit tartalmazza.
+* Malom játék két felhasználóval. A felhasználók egymás ellen játszanak.
 
 ### Útmutató az elsõ használatnál
 
@@ -15,9 +15,9 @@ Az alkalmazás indításakor a következõ képernyõ fogad:
 ![Alt text](https://github.com/bakbalazs/Malom-JavaFx/blob/master/kepek/inditasi_kepernyo.png  "Az alkalmazás indító képernyõje")
 
 A következõ opciók közül választhatunk.
-*Bejelentkezés a játékba.
-*Új felhasználó regisztrálása
-*Eredménylista megtekintése, amely a játékosok vereségeit és gyõzelmeit tartalmazza.
+* Bejelentkezés a játékba.
+* Új felhasználó regisztrálása
+* Eredménylista megtekintése, amely a játékosok vereségeit és gyõzelmeit tartalmazza.
 
 ![Alt text](https://github.com/bakbalazs/Malom-JavaFx/blob/master/kepek/jatekos_letrehozas_kepernyo.png  "A regisztrációs képernyõ")
 
@@ -54,7 +54,7 @@ Játék közben meg tudjuk nézni a játékszabályokat is a _Segítség_ menüpont _Játék
 A játékszabály megtekintésekor a megkezdett játékunk a háttérben fut tovább. 
 A szabályzat a következõképpen néz ki.
 
-![Alt text](https://github.com/bakbalazs/Malom-JavaFx/blob/master/kepek/jatekszabaly.png  "Játékszabályok") //TODO
+![Alt text](https://github.com/bakbalazs/Malom-JavaFx/blob/master/kepek/jatekszabaly.png  "Játékszabályok")
 
 Játék közben is van lehetõségünk kijelentkezésre a _Fájl_ menüpont _Kijelentkezés_ opciót választva. Ezesetben a következõ képernyõ fogad.
 

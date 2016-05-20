@@ -97,11 +97,12 @@ public class FeluletBetoltese {
 
 	public void JatekSzabaly() throws IOException {
 		logolo.info("Játékszabály meg lett nyitva.");
-//		Pane p = loader.load(getClass().getResource("/fxml/JatekSzabaly.fxml").openStream());
-//		Scene s = new Scene(p);
-//		stage.setScene(s);
-//		stage.setResizable(false);
-//		stage.setTitle("Játékszabály");
-//		stage.show();
+		FXMLLoader loaderJ = new FXMLLoader();
+		Pane p = loaderJ.load(getClass().getResource("/fxml/JatekSzabaly.fxml").openStream());
+		Scene s = new Scene(p);
+		stage.setScene(s);
+		stage.setResizable(false);
+		stage.setTitle("Játékszabály");
+		stage.show();
 	}
 }
