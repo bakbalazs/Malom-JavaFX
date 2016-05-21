@@ -53,7 +53,7 @@ public class BejelentkezesTest {
 
 	@BeforeClass
 	public static void sqlBeallitas() throws Exception {
-		es.em = (EntityManager) Persistence.createEntityManagerFactory("testMYSQL").createEntityManager();
+		es.em = (EntityManager) Persistence.createEntityManagerFactory("malom-db.h2").createEntityManager();
 	}
 	
 	@Test
@@ -67,18 +67,15 @@ public class BejelentkezesTest {
 		b.setVereseg(0);
 		es.em.persist(b);
 		es.em.clear();
-
-
-//		Query query = es.em.createQuery("SELECT u FROM Bejelentkezes u where u.id=:id");
-//		query.setParameter("id", b.getId());
-//		Bejelentkezes kiszed = (Bejelentkezes) query.getSingleResult();
-//		assertEquals(kiszed, b);
 		es.em.remove(b);
 	}
+	
+	private List<Bejelentkezes> FelhasznaloLista = new ArrayList<>();
+	private TaroltFelhasznalok felhasznalok = new TaroltFelhasznalok();
+	
 	@Test
 	public void taroltFelhazsnalok() {
-		List<Bejelentkezes> FelhasznaloLista = new ArrayList<>();
-		TaroltFelhasznalok felhasznalok = new TaroltFelhasznalok();
+		
 		Bejelentkezes b = new Bejelentkezes();
 		b.setFelhasznalonev("Felhasznalo");
 		b.setJelszo("jelszo");
@@ -88,14 +85,13 @@ public class BejelentkezesTest {
 		es.em.persist(b);
 
 		FelhasznaloLista = felhasznalok.taroltFelhasznalok();
+		FelhasznaloLista.stream().map(s -> s.getFelhasznalonev()).forEach(System.out::println);
 		for (Bejelentkezes l : FelhasznaloLista) {
 			assertEquals("Felhasznalo", l.getFelhasznalonev());
 			assertEquals("jelszo", l.getJelszo());
 			assertEquals(2, l.getGyozelem().intValue());
 			assertEquals(0, l.getVereseg().intValue());
-			assertEquals(FelhasznaloLista, FelhasznaloLista);
-		}
-		
+			}
 	}
 
 }

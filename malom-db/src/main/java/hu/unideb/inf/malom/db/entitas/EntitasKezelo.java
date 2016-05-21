@@ -27,7 +27,7 @@ public class EntitasKezelo {
 	 * Csatlakozik az adatbázishoz és betölti a tartalmat.
 	 **/
 	public EntitasKezelo() {
-		emf = Persistence.createEntityManagerFactory("malom-db.MYSQL");
+		emf = Persistence.createEntityManagerFactory("malom-db.h2");
 		em = emf.createEntityManager();
 
 		em.getTransaction().begin();
