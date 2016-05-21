@@ -8,16 +8,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import hu.unideb.inf.malom.ui.kezelo.felulet.FeluletBetoltese;
-import hu.unideb.inf.malom.vezerles.BabuMozgatas;
 import hu.unideb.inf.malom.vezerles.KepBetoltese;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Point2D;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -186,6 +193,12 @@ public class MalomKezelo implements Initializable {
 	@FXML
 	private ImageView img24;
 
+	protected static int nombreRightF;
+
+	protected static int nombreLeftF;
+
+	protected static int curseur;
+
 	@FXML
 	public void kijelentkezesMenu(ActionEvent event) throws IOException {
 		logolo.debug("Kijelentkezés gombot használták!");
@@ -202,6 +215,7 @@ public class MalomKezelo implements Initializable {
 
 	@FXML
 	public void jatekSzabaly(ActionEvent event) throws IOException {
+		logolo.info("Játékszabál megnyitva.");
 		betoltes.JatekSzabaly();
 	}
 
@@ -224,6 +238,7 @@ public class MalomKezelo implements Initializable {
 		KepBetoltese.insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
 		KepBetoltese.insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
 		KepBetoltese.insertImage(new Image("/img/FeherKarika.png"), FeherBabuHely);
+		logolo.info("Fehér Bábuk felrakva.");
 
 		KepBetoltese.insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
 		KepBetoltese.insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
@@ -234,31 +249,146 @@ public class MalomKezelo implements Initializable {
 		KepBetoltese.insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
 		KepBetoltese.insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
 		KepBetoltese.insertImage(new Image("/img/FeketeKarika.png"), FeketeBabuHely);
+		logolo.info("Fekete Bábuk felrakva.");
 
-		BabuMozgatas.setupGestureTarget(target1);
-		BabuMozgatas.setupGestureTarget(target2);
-		BabuMozgatas.setupGestureTarget(target3);
-		BabuMozgatas.setupGestureTarget(target4);
-		BabuMozgatas.setupGestureTarget(target5);
-		BabuMozgatas.setupGestureTarget(target6);
-		BabuMozgatas.setupGestureTarget(target7);
-		BabuMozgatas.setupGestureTarget(target8);
-		BabuMozgatas.setupGestureTarget(target9);
-		BabuMozgatas.setupGestureTarget(target10);
-		BabuMozgatas.setupGestureTarget(target11);
-		BabuMozgatas.setupGestureTarget(target12);
-		BabuMozgatas.setupGestureTarget(target13);
-		BabuMozgatas.setupGestureTarget(target14);
-		BabuMozgatas.setupGestureTarget(target15);
-		BabuMozgatas.setupGestureTarget(target16);
-		BabuMozgatas.setupGestureTarget(target17);
-		BabuMozgatas.setupGestureTarget(target18);
-		BabuMozgatas.setupGestureTarget(target19);
-		BabuMozgatas.setupGestureTarget(target20);
-		BabuMozgatas.setupGestureTarget(target21);
-		BabuMozgatas.setupGestureTarget(target22);
-		BabuMozgatas.setupGestureTarget(target23);
-		BabuMozgatas.setupGestureTarget(target24);
+		// BabuMozgatas.mozgatKepCel(target1);
+		// BabuMozgatas.mozgatKepCel(target2);
+		// BabuMozgatas.mozgatKepCel(target3);
+		// BabuMozgatas.mozgatKepCel(target4);
+		// BabuMozgatas.mozgatKepCel(target5);
+		// BabuMozgatas.mozgatKepCel(target6);
+		// BabuMozgatas.mozgatKepCel(target7);
+		// BabuMozgatas.mozgatKepCel(target8);
+		// BabuMozgatas.mozgatKepCel(target9);
+		// BabuMozgatas.mozgatKepCel(target10);
+		// BabuMozgatas.mozgatKepCel(target11);
+		// BabuMozgatas.mozgatKepCel(target12);
+		// BabuMozgatas.mozgatKepCel(target13);
+		// BabuMozgatas.mozgatKepCel(target14);
+		// BabuMozgatas.mozgatKepCel(target15);
+		// BabuMozgatas.mozgatKepCel(target16);
+		// BabuMozgatas.mozgatKepCel(target17);
+		// BabuMozgatas.mozgatKepCel(target18);
+		// BabuMozgatas.mozgatKepCel(target19);
+		// BabuMozgatas.mozgatKepCel(target20);
+		// BabuMozgatas.mozgatKepCel(target21);
+		// BabuMozgatas.mozgatKepCel(target22);
+		// BabuMozgatas.mozgatKepCel(target23);
+		// BabuMozgatas.mozgatKepCel(target24);
+
+		mozgatKepCel(target1);
+		mozgatKepCel(target2);
+		mozgatKepCel(target3);
+		mozgatKepCel(target4);
+		mozgatKepCel(target5);
+		mozgatKepCel(target6);
+		mozgatKepCel(target7);
+		mozgatKepCel(target8);
+		mozgatKepCel(target9);
+		mozgatKepCel(target10);
+		mozgatKepCel(target11);
+		mozgatKepCel(target12);
+		mozgatKepCel(target13);
+		mozgatKepCel(target14);
+		mozgatKepCel(target15);
+		mozgatKepCel(target16);
+		mozgatKepCel(target17);
+		mozgatKepCel(target18);
+		mozgatKepCel(target19);
+		mozgatKepCel(target20);
+		mozgatKepCel(target21);
+		mozgatKepCel(target22);
+		mozgatKepCel(target23);
+		mozgatKepCel(target24);
+
+	}
+
+	public void mozgatKepForras(final ImageView source) {
+
+		source.setOnDragDetected(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				Dragboard db = source.startDragAndDrop(TransferMode.MOVE);
+				ClipboardContent content = new ClipboardContent();
+				Image sourceImage = source.getImage();
+				content.putImage(sourceImage);
+				db.setContent(content);
+				KepBetoltese.imageView = source;
+				event.consume();
+			}
+		});
+
+		source.setOnMouseEntered(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent e) {
+				source.setCursor(Cursor.HAND);
+				System.out.println("e...: " + e.getSceneX());
+				// curseur = (int) e.getSceneX();
+			}
+		});
+	}
+
+	static int nombreLeft = 9;
+	static int nombreRight = 0;
+
+	boolean odarakva = true;
+
+	int c = 0;
+
+	public void mozgatKepCel(final VBox targetBox) {
+
+		targetBox.setOnDragOver(new EventHandler<DragEvent>() {
+			@Override
+			public void handle(DragEvent event) {
+
+				Dragboard db = event.getDragboard();
+
+				if (db.hasImage()) {
+					event.acceptTransferModes(TransferMode.MOVE);
+				}
+
+				event.consume();
+			}
+		});
+
+		targetBox.setOnDragDropped(new EventHandler<DragEvent>() {
+			@Override
+			public void handle(DragEvent event) {
+
+				Dragboard db = event.getDragboard();
+
+				if (db.hasImage()) {
+
+					KepBetoltese.imageView.setImage(db.getImage());
+
+					Point2D localPoint = targetBox.sceneToLocal(new Point2D(event.getSceneX(), event.getSceneY()));
+
+					// System.out.println("event.getSceneX : " +
+					// event.getSceneX());
+					// System.out.println("localPoint.getX : " +
+					// localPoint.getX());
+					// System.out.println("********");
+
+					targetBox.getChildren().remove(KepBetoltese.imageView);
+
+					KepBetoltese.imageView
+							.setX((int) (localPoint.getX() - KepBetoltese.imageView.getBoundsInLocal().getWidth() / 2));
+					KepBetoltese.imageView.setY(
+							(int) (localPoint.getY() - KepBetoltese.imageView.getBoundsInLocal().getHeight() / 2));
+
+					targetBox.getChildren().add(KepBetoltese.imageView);
+				
+
+					event.setDropCompleted(true);
+				} else {
+					event.setDropCompleted(false);
+				}
+
+				event.consume();
+			}
+		});
+
 	}
 
 }

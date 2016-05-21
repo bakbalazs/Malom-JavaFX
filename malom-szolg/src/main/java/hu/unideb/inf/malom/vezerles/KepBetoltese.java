@@ -6,15 +6,15 @@ import javafx.scene.layout.VBox;
 
 public class KepBetoltese {
 
-	static ImageView iv;
+	public static ImageView imageView;
 
 	public static void insertImage(Image i, VBox hb1) {
-		iv = new ImageView();
-		iv.setImage(i);
+		imageView = new ImageView();
+		imageView.setImage(i);
 
-		BabuMozgatas.setupGestureSource(iv);
+		BabuMozgatas.mozgatKepForras(imageView);
 
-		hb1.getChildren().add(iv);
+		hb1.getChildren().add(imageView);
 	}
 
 }

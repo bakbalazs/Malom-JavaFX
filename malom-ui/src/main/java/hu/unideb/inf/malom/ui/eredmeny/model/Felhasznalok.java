@@ -14,23 +14,25 @@ import javafx.beans.property.SimpleStringProperty;
 public class Felhasznalok {
 
 	/**
-	 * 
+	 * Az eredménylista számára létrehozott id.
 	 */
 	private SimpleIntegerProperty id;
 	/**
-	 * 
+	 * Az eredménylista számára létrehozott keresztnév.
 	 */
 	private SimpleStringProperty keresztnev;
 	/**
-	 * 
+	 * Az eredménylista számára létrehozott győzelem.
 	 */
 	private SimpleIntegerProperty gyozelem;
 	/**
-	 * 
+	 * Az eredménylista számára létrehozott vereség.
 	 */
 	private SimpleIntegerProperty vereseg;
 
 	/**
+	 * Konstruktor amivel létre tudunk hozni egy felhasználót, az eredménylista számára.
+	 * 
 	 * @param id a játékos beállítandó id-ja.
 	 * @param keresztnev a játákos beállítandó keresztneve.
 	 * @param gyozelem a játékoshoz tartozó győzelmi szám.
@@ -53,7 +55,9 @@ public class Felhasznalok {
 	}
 	
 	/**
-	 * @return
+	 * Visszaadja a játékos ID-ját az eredménylista számára.
+	 * 
+	 * @return A játékos id-ja.
 	 */
 	public SimpleIntegerProperty getIdProperty() {
 		return id;
@@ -78,7 +82,9 @@ public class Felhasznalok {
 	}
 	
 	/**
-	 * @return
+	 * Visszaadja a játékos keresztnevét az eredménylista számára.
+	 * 
+	 * @return A játékos keresztneve.
 	 */
 	public SimpleStringProperty getKeresztnevProperty() {
 		return keresztnev;
@@ -103,7 +109,9 @@ public class Felhasznalok {
 	}
 	
 	/**
-	 * @return
+	 * Visszaadja hogy az adott játékosnak mennyi győzelme van az eredménylista számára.
+	 * 
+	 * @return a játékos győzelmeinek a száma.
 	 */
 	public SimpleIntegerProperty getGyozelemProperty() {
 		return gyozelem;
@@ -128,8 +136,10 @@ public class Felhasznalok {
 	}
 	
 	/**
-	 * @return
-	 */
+	 * Visszaadja hogy a játékos hányszor vesztett játékot az eredménylista számára.
+	 * 
+	 * @return A játékos vereségeinek a száma.
+	**/
 	public SimpleIntegerProperty getVeresegProperty() {
 		return vereseg;
 	}

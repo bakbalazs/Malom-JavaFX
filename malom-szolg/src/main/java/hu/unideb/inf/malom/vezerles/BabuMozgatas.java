@@ -17,25 +17,19 @@ public class BabuMozgatas {
 	
 	static int curseur = 0;
 
-	public static void setupGestureSource(final ImageView source) {
+
+	public static void mozgatKepForras(final ImageView source) {
 
 		source.setOnDragDetected(new EventHandler<MouseEvent>() {
 
 			@Override
 			public void handle(MouseEvent event) {
-
-				/* allow any transfer mode */
 				Dragboard db = source.startDragAndDrop(TransferMode.MOVE);
-
-				/* put a image on dragboard */
 				ClipboardContent content = new ClipboardContent();
-
 				Image sourceImage = source.getImage();
 				content.putImage(sourceImage);
 				db.setContent(content);
-
-				KepBetoltese.iv = source;
-
+				KepBetoltese.imageView = source;
 				event.consume();
 			}
 		});
@@ -50,10 +44,10 @@ public class BabuMozgatas {
 		});
 	}
 
- static int nombreLeft = 0;
+ static int nombreLeft = 9;
 	 static int nombreRight = 0;
 
-	public static void setupGestureTarget(final VBox targetBox) {
+	public static void mozgatKepCel(final VBox targetBox) {
 
 		targetBox.setOnDragOver(new EventHandler<DragEvent>() {
 			@Override
@@ -77,7 +71,7 @@ public class BabuMozgatas {
 
 				if (db.hasImage()) {
 
-					KepBetoltese.iv.setImage(db.getImage());
+					KepBetoltese.imageView.setImage(db.getImage());
 
 					Point2D localPoint = targetBox.sceneToLocal(new Point2D(event.getSceneX(), event.getSceneY()));
 
@@ -87,28 +81,32 @@ public class BabuMozgatas {
 					// "+localPoint.getX());
 					// System.out.println("********");
 
-					targetBox.getChildren().remove(KepBetoltese.iv);
+					targetBox.getChildren().remove(KepBetoltese.imageView);
 
-					KepBetoltese.iv.setX((int) (localPoint.getX() - KepBetoltese.iv.getBoundsInLocal().getWidth() / 2));
-					KepBetoltese.iv.setY((int) (localPoint.getY() - KepBetoltese.iv.getBoundsInLocal().getHeight() / 2));
+					KepBetoltese.imageView.setX((int) (localPoint.getX() - KepBetoltese.imageView.getBoundsInLocal().getWidth() / 2));
+					KepBetoltese.imageView.setY((int) (localPoint.getY() - KepBetoltese.imageView.getBoundsInLocal().getHeight() / 2));
 
-					targetBox.getChildren().add(KepBetoltese.iv);
+					targetBox.getChildren().add(KepBetoltese.imageView);
 
-					// if (curseur < 130 && event.getSceneX() < 130) {
-					// nombreLeft = nombreLeft + 0;
-					// } else if (curseur < 130 && event.getSceneX() > 130) {
-					// nombreLeft--;
-					// nombreRight++;
-					// System.out.println(nombreLeft);
-					// System.out.println(nombreRight);
-					//// actualiser();
-					// } else if (curseur > 130 && event.getSceneX() > 130) {
-					// nombreRight = nombreRight + 0;
-					// } else if (curseur > 130 && event.getSceneX() < 130) {
-					// nombreLeft++;
-					// nombreRight--;
-					//// actualiser();
-					// }
+					 if (curseur < 80 && event.getSceneX() < 80) {
+					 nombreLeft = nombreLeft + 0;
+					 } else if (curseur < 80 && event.getSceneX() > 80) {
+					 nombreLeft--;
+					 nombreRight++;
+//					 System.out.println(nombreLeft);
+					 System.out.println("Még ennyi bábud van : " + nombreLeft);
+//					 System.out.println(nombreLeft);
+//					 System.out.println(nombreRight);
+					// actualiser();
+					 } else if (curseur > 80 && event.getSceneX() > 80) {
+					 nombreRight = nombreRight + 0;
+					 } else if (curseur > 80 && event.getSceneX() < 80) {
+					 nombreLeft++;
+					 nombreRight--;
+//					 System.out.println(nombreLeft);
+
+					// actualiser();
+					 }
 					event.setDropCompleted(true);
 				} else {
 					event.setDropCompleted(false);
