@@ -8,7 +8,7 @@ public class KepBetoltese {
 
 	public static ImageView imageView;
 
-	public static void insertImage(Image i, VBox hb1) {
+	public static void betoltes(Image i, VBox hb1) {
 		imageView = new ImageView();
 		imageView.setImage(i);
 
